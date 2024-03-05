@@ -1,0 +1,89 @@
+Timestamp,Email,Promotion,Field,Alternance,Interest_Health,Interest_Automotive,Interest_Construction,Interest_Pharmaceutical,Interest_Media,Interest_Logistics,Interest_Aerospace,Python,R,PowerBI,C /C++,java,Excel,linux,Matlab,VHDL,Bash,wireshark,Vivado,Orange,Safran,BNP Paribas,Renault,Dassault système,L'Oréal,Thalès,Siemens,Engie,EQUANS
+05/03/2024 13:12:10,chaimae.rabih@edu.esiee.fr,E4 /E5 /E3 alternants,DSIA,Non,1,1,1,1,4,3,3,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0
+05/03/2024 13:13:39,morgane.raymond@edu.esiee.fr,E4 /E5 /E3 alternants,DSIA,Non,2,4,3,1,5,2,3,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0
+05/03/2024 13:23:48,agash.nakuleswaran@edu.esiee.fr,E4 /E5 /E3 alternants,CYB,OUI,3,2,3,3,5,5,5,1,0,0,0,0,1,1,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0
+05/03/2024 13:24:00,adam.amerzag@edu.esiee.fr,E3 /E2/E1,GI,OUI,1,4,2,2,3,5,5,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0
+05/03/2024 13:24:03,pierre-olivier.dumas@edu.esiee.fr,E3 /E2/E1,DSIA,OUI,2,4,4,1,3,4,5,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:24:06,maxime.durrieux@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,3,2,1,3,3,3,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0
+05/03/2024 13:24:06,mathilde.guyot@edu.esiee.fr,E3 /E2/E1,CYB,OUI,3,4,4,4,4,2,3,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0
+05/03/2024 13:24:06,louise.faillant@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,3,1,2,2,4,5,1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,0,1,0,0,1,0,0
+05/03/2024 13:24:08,clement.morisseau@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,2,5,3,2,5,4,3,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,1,0,1,0,0,0
+05/03/2024 13:24:10,ismaila.sylla@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,4,4,4,3,4,3,3,1,0,0,1,0,0,0,1,0,0,0,0,1,0,1,0,1,0,0,0,0,0
+05/03/2024 13:24:17,paul.courtial@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,2,3,3,3,2,4,3,0,0,0,1,1,0,0,1,0,0,0,0,0,1,0,0,0,1,1,0,0,0
+05/03/2024 13:24:19,louka.morandi@edu.esiee.fr,E3 /E2/E1,DSIA,Non,1,2,1,1,4,3,3,0,0,0,0,1,1,1,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:24:19,matteo.beghelli@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,1,2,2,1,4,2,3,1,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0
+05/03/2024 13:24:21,felix.henard@edu.esiee.fr,E3 /E2/E1,DSIA,Non,3,4,3,2,3,2,5,1,0,0,1,0,0,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0,0
+05/03/2024 13:24:21,sophyan.nohu@edu.esiee.fr,E3 /E2/E1,CYB,Non,3,4,1,3,4,1,3,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0
+05/03/2024 13:24:26,marie.bouetel@edu.esiee.fr,E3 /E2/E1,AIC,Non,4,1,1,3,3,1,1,1,0,0,0,1,0,0,0,1,0,0,0,0,0,1,1,0,0,1,0,0,0
+05/03/2024 13:24:41,samad.abdul@edu.esiee.fr,E3 /E2/E1,ENG,OUI,1,2,3,2,4,1,2,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0
+05/03/2024 13:24:42,arthur.ung@edu.esiee.fr,E3 /E2/E1,SE,OUI,1,5,1,2,3,5,5,0,0,0,1,1,0,0,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:24:45,benjamin.lavielle@edu.esiee.fr,E3 /E2/E1,GI,OUI,4,2,4,3,2,2,3,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0
+05/03/2024 13:24:51,elina.bouhi@edu.esiee.fr,E3 /E2/E1,INF,OUI,1,3,1,2,3,2,4,0,0,0,1,1,0,0,0,1,0,0,0,1,0,1,1,0,0,0,0,0,0
+05/03/2024 13:24:53,adoucha.johnmariyaseelan@edu.esiee.fr,E4 /E5 /E3 alternants,AIC,Non,5,5,3,4,3,3,5,1,0,1,0,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0
+05/03/2024 13:25:00,louis.dirat@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,3,3,4,2,3,3,4,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0
+05/03/2024 13:25:02,lea.mary@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,1,2,1,2,3,2,5,1,0,1,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,1,1,0,0
+05/03/2024 13:25:05,ahmed.seggane@edu.esiee.fr,E3 /E2/E1,CYB,Non,4,2,3,5,5,5,4,1,0,0,0,1,1,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0
+05/03/2024 13:25:09,paul-alexandre.durandeauditmeges@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,3,3,3,3,5,5,5,1,0,1,0,0,0,0,1,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:25:26,matisse.devin@edu.esiee.fr,E3 /E2/E1,ENG,OUI,1,3,3,2,4,3,4,0,0,0,0,1,1,0,0,1,0,0,0,0,1,0,0,1,0,0,0,1,0
+05/03/2024 13:25:30,tefiniaina.rajaonson@edu.esiee.fr,E3 /E2/E1,INF,OUI,2,2,2,2,5,4,3,1,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:25:46,mohaned.seliman@edu.esiee.fr,E4 /E5 /E3 alternants,ENG,OUI,1,1,2,2,1,3,2,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0
+05/03/2024 13:25:47,bastien.corgnac@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,2,2,2,2,2,3,4,1,0,0,1,0,0,1,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0
+05/03/2024 13:26:00,maxime.bouet@gmail.com,E4 /E5 /E3 alternants,AIC,Non,2,4,3,1,4,1,3,1,0,0,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0,1,0,0,0
+05/03/2024 13:26:09,thomas.gachignard@edu.esiee.fr,E4 /E5 /E3 alternants,CYB,OUI,3,4,2,2,4,4,4,1,0,0,0,0,0,1,0,0,0,1,0,1,0,1,0,0,0,1,0,0,0
+05/03/2024 13:26:11,michel.chen@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,1,3,1,2,4,2,3,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+05/03/2024 13:26:21,alizee.forys@edu.esiee.fr,E4 /E5 /E3 alternants,ENG,OUI,4,3,4,3,3,4,4,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1
+05/03/2024 13:26:29,kacper.wojtowicz@edu.esiee.fr,E3 /E2/E1,SE,OUI,1,2,5,1,1,1,1,1,0,0,1,0,0,1,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0
+05/03/2024 13:26:51,antoine.ego@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,3,5,2,2,3,4,5,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,1,1,0,0
+05/03/2024 13:26:55,thibault.jablonski@edu.esiee.fr,E3 /E2/E1,CYB,OUI,2,4,3,4,5,4,5,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0
+05/03/2024 13:27:06,ilias.essaouissi@edu.esiee.fr,E3 /E2/E1,CYB,OUI,1,2,1,1,3,1,3,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0
+05/03/2024 13:27:15,clementine.troalen@edu.esiee.fr,E4 /E5 /E3 alternants,CYB,OUI,2,1,1,1,1,1,1,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0
+05/03/2024 13:27:23,josephine.camus@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,2,2,3,2,4,5,2,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+05/03/2024 13:27:42,pavel.dumenil@edu.esiee.fr,E3 /E2/E1,SE,OUI,1,4,2,2,1,3,5,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:27:43,elias.labbe@edu.esiee.fr,E3 /E2/E1,ENG,OUI,4,2,1,3,4,2,2,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0
+05/03/2024 13:28:01,tom.lalieu12@gmail.com,E3 /E2/E1,SE,OUI,1,5,2,2,5,2,2,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0
+05/03/2024 13:28:32,theo.phan@edu.esiee.fr,E3 /E2/E1,DSIA,Non,1,3,3,1,3,4,4,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0
+05/03/2024 13:29:09,elyse.legal@edu.esiee.fr,E3 /E2/E1,SE,OUI,2,3,1,3,3,2,5,1,0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0
+05/03/2024 13:29:14,clement.sainte-rose@edu.esiee.fr,E3 /E2/E1,CYB,OUI,4,4,3,2,2,1,5,1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0
+05/03/2024 13:29:16,gregory.raveyre@edu.esiee.fr,E4 /E5 /E3 alternants,SEI,Non,3,3,1,1,1,1,3,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0
+05/03/2024 13:29:30,philippine.martin@edu.esiee.fr,E3 /E2/E1,SEI,Non,4,4,3,2,4,3,2,1,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,1,1,0,0,0
+05/03/2024 13:29:39,terry.olampi@edu.esiee.fr,E3 /E2/E1,BIO-ESANTE,Non,5,2,1,5,4,3,2,1,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,0,0
+05/03/2024 13:29:49,thibault.leguidevais@edu.esiee.fr,E3 /E2/E1,CYB,OUI,2,2,2,2,3,3,4,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:29:50,lana.cheam@edu.esiee.fr,E3 /E2/E1,CYB,Non,1,2,1,1,2,3,3,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1
+05/03/2024 13:30:47,ilhan.yazici@edu.esiee.fr,E3 /E2/E1,GI,OUI,3,5,3,1,4,5,5,1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0
+05/03/2024 13:31:00,juliette.destouches@edu.esiee.fr,E3 /E2/E1,BIO-ESANTE,Non,5,4,1,4,1,1,3,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0
+05/03/2024 13:31:03,julien.baureche@edu.esiee.fr,E3 /E2/E1,SE,OUI,1,3,2,1,1,1,5,1,0,0,0,1,0,0,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:31:06,arthur.dorille@edu.esiee.fr,E3 /E2/E1,CYB,Non,3,3,1,3,3,4,3,0,0,0,1,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0,0,1
+05/03/2024 13:31:26,caroline.dasteguy@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,1,1,1,1,3,2,5,1,0,1,0,0,1,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:31:37,alexandre.domingues@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,2,5,2,2,5,3,4,1,0,0,0,1,0,1,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0
+05/03/2024 13:32:21,andrea.passave@edu.esiee.fr,E3 /E2/E1,DSIA,OUI,1,3,1,3,4,1,1,1,0,0,0,1,1,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0
+05/03/2024 13:32:32,jeremie.hamm@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,3,5,3,3,4,3,5,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0
+05/03/2024 13:32:36,jennifer.constantin2@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,3,4,1,2,1,2,5,1,0,0,1,0,0,0,1,0,0,0,0,0,1,0,1,0,0,1,0,0,0
+05/03/2024 13:32:42,valerie.lim@edu.esiee.fr,E3 /E2/E1,BIO-ESANTE,Non,5,2,1,5,3,2,1,1,1,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,0,1,0
+05/03/2024 13:32:57,samuel.zerah@edu.esiee.fr,E3 /E2/E1,BIO-ESANTE,Non,4,2,3,2,4,2,4,1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,0,1,0,1,0,0,0
+05/03/2024 13:33:24,eva.hong-tuan@edu.esiee.fr,E3 /E2/E1,ENG,OUI,4,3,3,3,1,3,3,1,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,0,0,1,0,1,0
+05/03/2024 13:33:44,youenn.legallic@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,5,3,1,4,3,5,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,1,0,0,1,0,0,0
+05/03/2024 13:33:48,laurent.zhang@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,5,4,1,4,4,5,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0
+05/03/2024 13:33:57,benjamin.pelouas@edu.esiee.fr,E4 /E5 /E3 alternants,CYB,OUI,2,2,2,2,2,2,2,1,0,0,1,0,0,1,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0
+05/03/2024 13:34:42,victor.bastergue@edu.esiee.fr,E3 /E2/E1,BIO-ESANTE,OUI,4,2,3,4,3,3,5,1,0,0,0,1,0,1,0,0,0,0,0,1,0,0,0,0,0,1,1,0,0
+05/03/2024 13:34:47,shriraj.karthigesu@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,5,3,3,4,1,1,5,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:35:18,macrane95@gmail.com,E3 /E2/E1,INF,OUI,4,1,1,4,5,1,4,1,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0
+05/03/2024 13:36:03,mateo.bichot@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,2,1,1,3,2,5,1,0,0,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,1,0,0
+05/03/2024 13:37:11,maya.perrin@edu.esiee.fr,E4 /E5 /E3 alternants,BIO-ESANTE,Non,5,1,1,3,4,1,3,1,1,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0,1,1,0,0,0
+05/03/2024 13:37:21,emilie.tausky@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,5,1,1,3,5,5,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0
+05/03/2024 13:38:51,keren.benadiba@edu.esiee.fr,E3 /E2/E1,BIO-ESANTE,Non,5,3,4,4,1,3,2,0,0,0,0,1,1,1,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0
+05/03/2024 13:38:54,romane.ngouah-pouesset@edu.esiee.fr,E3 /E2/E1,DSIA,Non,1,2,1,1,4,3,2,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0
+05/03/2024 13:39:21,samuel.pereiracarreira@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,1,4,1,3,1,1,4,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,1,0,1,1,0,0
+05/03/2024 13:40:05,gregory.quievreux@edu.esiee.fr,E3 /E2/E1,SEI,OUI,4,5,2,2,5,4,5,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,1,0,0
+05/03/2024 13:40:09,nolhan.emica@edu.esiee.fr,E3 /E2/E1,ENG,OUI,2,2,1,1,2,3,4,1,0,0,0,1,0,1,0,0,0,0,0,0,1,0,0,0,0,1,0,1,0
+05/03/2024 13:40:27,louis.montarnal@edu.esiee.fr,E4 /E5 /E3 alternants,AIC,Non,3,4,3,1,3,2,4,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0
+05/03/2024 13:40:29,theo.revelant@edu.esiee.fr,E3 /E2/E1,SE,OUI,1,3,3,1,3,3,3,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:41:58,rayen.soltani@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,3,3,3,3,3,3,3,1,1,0,1,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0
+05/03/2024 13:42:43,rodrigue.jason@edu.esiee.fr,E3 /E2/E1,SE,OUI,1,2,2,1,4,3,5,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0
+05/03/2024 13:42:59,jeremy.chen@edu.esiee.fr,E3 /E2/E1,CYB,OUI,2,4,2,3,4,4,5,1,0,0,1,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0
+05/03/2024 13:43:12,salome.siquier@edu.esiee.fr,E4 /E5 /E3 alternants,GI,OUI,1,4,4,1,4,5,5,1,0,0,0,0,1,0,1,0,0,0,0,0,1,0,1,0,1,0,0,0,0
+05/03/2024 13:44:25,vincent.nathan@edu.esiee.fr,E3 /E2/E1,SE,OUI,2,4,3,1,3,4,5,0,0,0,0,1,1,1,0,0,0,0,0,0,1,0,0,1,0,1,0,0,0
+05/03/2024 13:44:32,mustapha.lghachi94@gmail.com,E4 /E5 /E3 alternants,ENG,OUI,2,2,4,2,4,1,3,1,0,0,0,0,1,0,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1
+05/03/2024 13:44:34,matthieu.bron@edu.esiee.fr,E3 /E2/E1,DSIA,Non,2,5,2,2,3,4,3,1,0,0,0,0,1,1,0,0,0,0,0,0,1,1,1,1,1,1,0,1,0
+05/03/2024 13:45:25,louis.brossier@edu.esiee.fr,E3 /E2/E1,SE,OUI,4,5,2,3,1,3,5,1,0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0
+05/03/2024 13:45:42,yassmine.debbaghi@edu.esiee.fr,E4 /E5 /E3 alternants,SE,OUI,2,5,1,1,4,4,1,1,0,0,1,0,0,0,0,1,0,0,0,0,1,0,1,1,0,0,0,0,0
+05/03/2024 13:46:29,valentin.dumas@edu.esiee.fr,E4 /E5 /E3 alternants,INF,OUI,1,1,1,1,4,1,1,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0
