@@ -39,6 +39,7 @@ fav_languages = ["Python","Matlab","R","linux","C/C++","java","wireshark","Excel
 fav_company =   ["Thalès","Orange","Siemens","Engie","Safran","Renault","Dassault système","BNP Paribas","L'Oréal","EQUANS"]
 
 
+
 for languages in fav_languages:
        data[languages] = 0
 
