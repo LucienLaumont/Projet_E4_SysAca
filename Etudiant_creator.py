@@ -18,16 +18,6 @@ class Etudiant:
 
 
     def student_DSIA(self):
-        self.niveau_outils["Matlab"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0, 0.5, 0.3, 0.4, 0.4, 0.3])[0]
-        self.niveau_outils["Python"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.65, 0.25, 0.05, 0.03, 0.02,0])[0]
-        self.niveau_outils["C"]                = random.choices([5, 4, 3, 2, 1, 0], weights=[0.15, 0.15, 0.30, 0.15, 0.10, 0.05])[0]
-        self.niveau_outils["Microcontrolleur"] = random.choices([5, 4, 3, 2, 1, 0], weights=[0., 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["VHDL"]             = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Microprocesseur"]  = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Electronique"]     = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Probabilite"]      = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Reseau"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.05, 0.10, 0.15, 0.3, 0.3, 0.3])[0]
-        self.niveau_outils["IA"]               = random.choices([5, 4, 3, 2, 1, 0], weights=[0.7, 0.15, 0.5, 0.5, 0.5, 0])[0]
         
         self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.2, 0.345, 0.236, 0.091, 0.127])[0]
         self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.127, 0.073, 0.473, 0.182, 0.145])[0]
@@ -46,17 +36,6 @@ class Etudiant:
 
 
     def student_AIC(self):
-        # Logique pour créer un étudiant en AIC
-        self.domaine_interets["Matlab"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0, 0.5, 0.3, 0.4, 0.4, 0.3])[0]
-        self.domaine_interets["Python"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.65, 0.25, 0.05, 0.03, 0.02,0])[0]
-        self.domaine_interets["C"]                = random.choices([5, 4, 3, 2, 1, 0], weights=[0.15, 0.15, 0.30, 0.15, 0.10, 0.05])[0]
-        self.domaine_interets["Microcontrolleur"] = random.choices([5, 4, 3, 2, 1, 0], weights=[0., 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.domaine_interets["VHDL"]             = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.domaine_interets["Microprocesseur"]  = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.domaine_interets["Electronique"]     = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.domaine_interets["Probabilite"]      = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.domaine_interets["Reseau"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.05, 0.10, 0.15, 0.3, 0.3, 0.3])[0]
-        self.domaine_interets["IA"]               = random.choices([5, 4, 3, 2, 1, 0], weights=[0.7, 0.15, 0.5, 0.5, 0.5, 0])[0]
         
         self.interet_entreprises = {
             "Thales": random.choices([1, 0], weights=[0.895, 0.105])[0],
@@ -72,17 +51,6 @@ class Etudiant:
         }
         
     def student_CYB(self):
-        # Logique pour créer un étudiant en CYB
-        self.niveau_outils["Matlab"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0, 0.5, 0.3, 0.4, 0.4, 0.3])[0]
-        self.niveau_outils["Python"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.65, 0.25, 0.05, 0.03, 0.02,0])[0]
-        self.niveau_outils["C"]                = random.choices([5, 4, 3, 2, 1, 0], weights=[0.15, 0.15, 0.30, 0.15, 0.10, 0.05])[0]
-        self.niveau_outils["Microcontrolleur"] = random.choices([5, 4, 3, 2, 1, 0], weights=[0., 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["VHDL"]             = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Microprocesseur"]  = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Electronique"]     = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Probabilite"]      = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
-        self.niveau_outils["Reseau"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.05, 0.10, 0.15, 0.3, 0.3, 0.3])[0]
-        self.niveau_outils["IA"]               = random.choices([5, 4, 3, 2, 1, 0], weights=[0.7, 0.15, 0.5, 0.5, 0.5, 0])[0]
 
         self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.109, 0.217, 0.326, 0.217, 0.130])[0]
         self.domaine_interets["Construction"] = random.choices([1, 2, 3, 4, 5], weights=[0.304, 0.370, 0.239, 0.087, 0.000])[0]
