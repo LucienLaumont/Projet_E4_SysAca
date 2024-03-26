@@ -57,7 +57,20 @@ class Etudiant:
         self.domaine_interets["Probabilite"]      = random.choices([5, 4, 3, 2, 1, 0], weights=[0.6, 0.3, 0.05, 0.025, 0.015, 0.01])[0]
         self.domaine_interets["Reseau"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0.05, 0.10, 0.15, 0.3, 0.3, 0.3])[0]
         self.domaine_interets["IA"]               = random.choices([5, 4, 3, 2, 1, 0], weights=[0.7, 0.15, 0.5, 0.5, 0.5, 0])[0]
-
+        
+        self.interet_entreprises = {
+            "Thales": random.choices([1, 0], weights=[0.895, 0.105])[0],
+            "Orange": random.choices([1, 0], weights=[0.368, 0.632])[0],
+            "Siemens": random.choices([1, 0], weights=[0.053, 0.947])[0],
+            "Engie": random.choices([1, 0], weights=[0.053, 0.947])[0],
+            "Safran": random.choices([1, 0], weights=[0.526, 0.474])[0],
+            "Renault": random.choices([1, 0], weights=[0.263, 0.737])[0],
+            "Dassault systeme": random.choices([1, 0], weights=[0.579, 0.421])[0],
+            "BNP Paribas": random.choices([1, 0], weights=[0.421, 0.579])[0],
+            "L'Oreal": random.choices([1, 0], weights=[0.105, 0.895])[0],
+            "EQUANS": random.choices([1, 0], weights=[0, 0.1])[0]
+        }
+        
     def student_CYB(self):
         # Logique pour créer un étudiant en CYB
         self.niveau_outils["Matlab"]           = random.choices([5, 4, 3, 2, 1, 0], weights=[0, 0.5, 0.3, 0.4, 0.4, 0.3])[0]
@@ -85,17 +98,18 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.261, 0.196, 0.283, 0.196, 0.065])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.065, 0.130, 0.261, 0.304, 0.239])[0]
                 
-        self.interet_entreprises["Google"]
-        self.interet_entreprises["Microsoft"]
-        self.interet_entreprises["IBM"]
-        self.interet_entreprises["Dassault"]
-        self.interet_entreprises["Thales"]
-        self.interet_entreprises["Airbus"]
-        self.interet_entreprises[""]
-        self.interet_entreprises[""]
-        self.interet_entreprises[""]
-        self.interet_entreprises[""]
-        self.interet_entreprises[""]
+         self.interet_entreprises = {
+            "Thales": random.choices([1, 0], weights=[0.804, 0.196])[0],
+            "Orange": random.choices([1, 0], weights=[0.609, 0.391])[0],
+            "Siemens": random.choices([1, 0], weights=[0.196, 0.804])[0],
+            "Engie": random.choices([1, 0], weights=[0.13, 0.87])[0],
+            "Safran": random.choices([1, 0], weights=[0.283, 0.717])[0],
+            "Renault": random.choices([1, 0], weights=[0.196, 0.804])[0],
+            "Dassault systeme": random.choices([1, 0], weights=[0.5, 0.5])[0],
+            "BNP Paribas": random.choices([1, 0], weights=[0.348, 0.652])[0],
+            "L'Oreal": random.choices([1, 0], weights=[0.13, 0.87])[0],
+            "EQUANS": random.choices([1, 0], weights=[0.109, 0.891])[0]
+        }
         
         
     def student_GI(self):
