@@ -8,11 +8,11 @@ def load_data():
     data_cleaned = data.drop(['Timestamp', 'Email'], axis=1)
 
     # Sélection des colonnes spécifiques pour X
-    interest_columns = [
-        'Interest_Finance', 'Interest_Education', 'Interest_Energy',
-        'Interest_Farming', 'Interest_Telecom', 'Interest_Pharmaceutical',
-        'Interest_Media', 'Interest_Logistics', 'Interest_Aerospace'
+    interest_columns = ['Interest_Health','Interest_Automotive','Interest_Construction','Interest_Pharmaceutical','Interest_Media',
+    'Interest_Logistics','Interest_Aerospace','Interest_Telecom','Interest_Tourism','Interest_Environment',
+    'Interest_Finance','Interest_Education','Interest_Energy','Interest_Farming'
     ]
+    
     tool_company_columns = [
         'Python', 'Matlab', 'R', 'linux', 'C/C++', 'java', 'wireshark', 'Excel',
         'Vivado', 'VHDL', 'PowerBI', 'Trnsys', 'Bash', 'Thalès', 'Orange', 'Siemens',

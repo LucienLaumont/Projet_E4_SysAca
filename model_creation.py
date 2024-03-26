@@ -8,18 +8,19 @@ data = pd.read_csv('Data_Renamed.csv')
 
 data_cleaned = data.drop(['Timestamp', 'Email'], axis=1)
 
-# Sélection des colonnes spécifiques pour X
-interest_columns = [
-    'Interest_Finance', 'Interest_Education', 'Interest_Energy',
-    'Interest_Farming', 'Interest_Telecom', 'Interest_Pharmaceutical',
-    'Interest_Media', 'Interest_Logistics', 'Interest_Aerospace'
-]
+    # Sélection des colonnes spécifiques pour X
+interest_columns = ['Interest_Health','Interest_Automotive','Interest_Construction','Interest_Pharmaceutical','Interest_Media',
+    'Interest_Logistics','Interest_Aerospace','Interest_Telecom','Interest_Tourism','Interest_Environment',
+    'Interest_Finance','Interest_Education','Interest_Energy','Interest_Farming'
+    ]
+    
 tool_company_columns = [
-    'Python', 'Matlab', 'R', 'linux', 'C/C++', 'java', 'wireshark', 'Excel',
-    'Vivado', 'VHDL', 'PowerBI', 'Trnsys', 'Bash', 'Thalès', 'Orange', 'Siemens',
-    'Engie', 'Safran', 'Renault', 'Dassault système', 'BNP Paribas', 'L\'Oréal',
-    'EQUANS', 'C /C++'
-]
+        'Python', 'Matlab', 'R', 'linux', 'C/C++', 'java', 'wireshark', 'Excel',
+        'Vivado', 'VHDL', 'PowerBI', 'Trnsys', 'Bash', 'Thalès', 'Orange', 'Siemens',
+        'Engie', 'Safran', 'Renault', 'Dassault système', 'BNP Paribas', 'L\'Oréal',
+        'EQUANS', 'C /C++'
+    ]
+
 
 # Assemblage des caractéristiques X en excluant 'Field'
 X = data_cleaned[interest_columns + tool_company_columns]
@@ -33,7 +34,7 @@ y = data_cleaned['Field']
 y_encoded = pd.factorize(y)[0]
 
 # Division des données en ensembles d'entraînement et de test
-X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size=0.25, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y_encoded, test_size= 0.30, random_state=42)
 
 # Définition de la fonction pour calculer l'exactitude pour un ensemble de caractéristiques donné
 def calculate_accuracy(features):
