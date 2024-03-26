@@ -166,16 +166,16 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.258, 0.129, 0.387, 0.161, 0.065])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.129, 0.129, 0.226, 0.226, 0.290])[0]
 
-        self.domaine_interets["Thales"] = random.choices([0, 1], weights=[0.548, 0.452])[0]
-        self.domaine_interets["Orange"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
-        self.domaine_interets["Siemens"] = random.choices([0, 1], weights=[0.742, 0.258])[0]
-        self.domaine_interets["Engie"] = random.choices([0, 1], weights=[0.129, 0.871])[0]
-        self.domaine_interets["Safran"] = random.choices([0, 1], weights=[0.677, 0.323])[0]
-        self.domaine_interets["Renault"] = random.choices([0, 1], weights=[0.742, 0.258])[0]
-        self.domaine_interets["Dassault Systeme"] = random.choices([0, 1], weights=[0.710, 0.290])[0]
-        self.domaine_interets["BNP Paribas"] = random.choices([0, 1], weights=[0.839, 0.161])[0]
-        self.domaine_interets["LOreal"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
-        self.domaine_interets["EQUANS"] = random.choices([0, 1], weights=[0.613, 0.387])[0]
+        self.interet_entreprises["Thales"] = random.choices([0, 1], weights=[0.548, 0.452])[0]
+        self.interet_entreprises["Orange"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
+        self.interet_entreprises["Siemens"] = random.choices([0, 1], weights=[0.742, 0.258])[0]
+        self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.129, 0.871])[0]
+        self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.677, 0.323])[0]
+        self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.742, 0.258])[0]
+        self.interet_entreprises["Dassault Systeme"] = random.choices([0, 1], weights=[0.710, 0.290])[0]
+        self.interet_entreprises["BNP Paribas"] = random.choices([0, 1], weights=[0.839, 0.161])[0]
+        self.interet_entreprises["LOreal"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[0.613, 0.387])[0]
 
 
     
@@ -225,16 +225,16 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.189, 0.270, 0.459, 0.081, 0.000])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.135, 0.108, 0.297, 0.297, 0.162])[0]
         
-        self.domaine_interets["Thales"] = random.choices([0, 1], weights=[0.432, 0.568])[0]
-        self.domaine_interets["Orange"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
-        self.domaine_interets["Siemens"] = random.choices([0, 1], weights=[0.892, 0.108])[0]
-        self.domaine_interets["Engie"] = random.choices([0, 1], weights=[0.946, 0.054])[0]
-        self.domaine_interets["Safran"] = random.choices([0, 1], weights=[0.703, 0.297])[0]
-        self.domaine_interets["Renault"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
-        self.domaine_interets["Dassault Systeme"] = random.choices([0, 1], weights=[0.514, 0.486])[0]
-        self.domaine_interets["BNP Paribas"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
-        self.domaine_interets["LOreal"] = random.choices([0, 1], weights=[0.919, 0.081])[0]
-        self.domaine_interets["EQUANS"] = random.choices([0, 1], weights=[1.000, 0.000])[0]
+        self.interet_entreprises["Thales"] = random.choices([0, 1], weights=[0.432, 0.568])[0]
+        self.interet_entreprises["Orange"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
+        self.interet_entreprises["Siemens"] = random.choices([0, 1], weights=[0.892, 0.108])[0]
+        self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.946, 0.054])[0]
+        self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.703, 0.297])[0]
+        self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
+        self.interet_entreprises["Dassault Systeme"] = random.choices([0, 1], weights=[0.514, 0.486])[0]
+        self.interet_entreprises["BNP Paribas"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
+        self.interet_entreprises["LOreal"] = random.choices([0, 1], weights=[0.919, 0.081])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[1.000, 0.000])[0]
 
         
 
