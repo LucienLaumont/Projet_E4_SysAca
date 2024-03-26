@@ -137,6 +137,17 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.133, 0.2, 0.2, 0.267, 0.2])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.0, 0.067, 0.333, 0.133, 0.467])[0]
 
+        self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.2, 0.8])[0]
+        self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.933, 0.067])[0]
+        self.interet_entreprises["Siemens"] = random.choices([1, 0], weights=[0.933, 0.067])[0]
+        self.interet_entreprises["Engie"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
+        self.interet_entreprises["Safran"] = random.choices([1, 0], weights=[0.267, 0.733])[0]
+        self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.467, 0.533])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.6, 0.4])[0]
+        self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
+        self.interet_entreprises["L'Oreal"] = random.choices([1, 0], weights=[0.8, 0.2])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
+
 
     def student_ENE(self):
         # Logique pour créer un étudiant en ENE
@@ -184,6 +195,17 @@ class Etudiant:
         self.domaine_interets["Media"] = random.choices([1, 2, 3, 4, 5], weights=[0.292, 0.167, 0.292, 0.250, 0.000])[0]
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.333, 0.458, 0.208, 0.000, 0.000])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.333, 0.292, 0.208, 0.083, 0.083])[0]
+
+        self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.458, 0.542])[0]
+        self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.708, 0.292])[0]
+        self.interet_entreprises["Siemens"] = random.choices([1, 0], weights=[0.792, 0.208])[0]
+        self.interet_entreprises["Engie"] = random.choices([1, 0], weights=[0.792, 0.208])[0]
+        self.interet_entreprises["Safran"] = random.choices([1, 0], weights=[0.667, 0.333])[0]
+        self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.958, 0.042])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.708, 0.292])[0]
+        self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[0.917, 0.083])[0]
+        self.interet_entreprises["L'Oreal"] = random.choices([1, 0], weights=[0.292, 0.708])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
 
 
     def student_INF(self):
