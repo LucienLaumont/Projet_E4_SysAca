@@ -7,7 +7,54 @@ class Etudiant:
         self.filiere             = filiere
         self.domaine_interets    = {"Environnement": 0,"Automobile": 0,"Finance": 0,"Sante": 0}
         self.niveau_outils       = {"Matlab" : 0,"Python": 0,"C": 0,"Microcontrolleur": 0,"VHDL": 0,"Microprocesseur": 0,"Electronique": 0,"Probabilite": 0,"Reseau": 0,"IA": 0}
-        self.interet_entreprises = {"Google" : 0,"Microsoft" : 0,"IBM" : 0,"Dassault" : 0,"Thales" : 0,"Airbus" : 0,"Total" : 0,"Capgemini" : 0,"Sanofi" : 0,"Vinci" : 0,"Orange" : 0,"Renault" : 0,"Nestlé" : 0,"Samsung" : 0}
+        self.interet_entreprises = entreprises = {
+            "Thales": 0,
+            "Orange": 0,
+            "Siemens": 0,
+            "Engie": 0,
+            "Safran": 0,
+            "Renault": 0,
+            "Dassault systeme": 0,
+            "BNP Paribas": 0,
+            "L'Oreal": 0,
+            "EQUANS": 0
+        }
+
+          self.niveau_matiere = {
+            'Information_Analogique': 0,
+            'Programmation_Python': 0,
+            'Programmation_Java': 0,
+            'Programmation_C': 0,
+            'Traitement_du_signal': 0,
+            'Microprocesseurs': 0,
+            'Electronique_Numerique': 0,
+            'Electronique_Analogique': 0,
+            'Probabilite': 0,
+            'Algortihmique': 0,
+            'Reseaux': 0,
+            'Optimisation_et_IA': 0,
+            'Base_de_donnees': 0,
+            'Systeme_Dynamique': 0,
+            'Microcontroleurs': 0
+        }
+
+        self.choix_ouap = {
+            'Fondamentaux_Energie_Thermique': 0,
+            'Systeme_Exploitation': 0,
+            'Cybersecurite_avance': 0,
+            'Digital_Hardware': 0,
+            'Data_Science': 0,
+            'Modelisation_Effets_Therapeutique': 0,
+            'Programation_Sys_Exploitation': 0,
+            'IA_Deep_Learning': 0,
+            'Robotique': 0,
+            'Simulation_Pilotage_Flux': 0,
+            'Reseaux_Avances': 0,
+            'Biologie_Moleculaire': 0,
+            'Programmation_C_Projet_Jeux': 0,
+            'Fondamentaux_Energie_Elec': 0
+        }
+
 
     def create_student(self):
         method_name = f"student_{self.filiere}"
@@ -18,6 +65,17 @@ class Etudiant:
 
 
     def student_DSIA(self):
+
+        self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.345, 0.655])[0]
+        self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.691, 0.309])[0]
+        self.interet_entreprises["Siemens"] = random.choices([1, 0], weights=[0.945, 0.055])[0]
+        self.interet_entreprises["Engie"] = random.choices([1, 0], weights=[0.927, 0.073])[0]
+        self.interet_entreprises["Safran"] = random.choices([1, 0], weights=[0.564, 0.436])[0]
+        self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.818, 0.182])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.527, 0.473])[0]
+        self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[0.436, 0.564])[0]
+        self.interet_entreprises["L'Oreal"] = random.choices([1, 0], weights=[0.673, 0.327])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[0.964, 0.036])[0]
         
         self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.2, 0.345, 0.236, 0.091, 0.127])[0]
         self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.127, 0.073, 0.473, 0.182, 0.145])[0]
