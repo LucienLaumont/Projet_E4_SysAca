@@ -5,7 +5,7 @@ class Etudiant:
         self.nom                 = nom
         self.prenom              = prenom
         self.filiere             = filiere
-        self.domaine_interets    = {"Environnement": 0,"Automobile": 0,"Finance": 0,"Sante": 0}
+        self.domaine_interets    = {"Automotive": 0,"Environment": 0,"Construction": 0,"Tourism": 0,"Communication":0,"Finance":0,"Education":0,"Energy":0,"Farming":0,"Telecom":0,"Pharmaceutical":0,"Media":0,"Logistics":0,"Aerospace":0}
         self.niveau_outils       = {"Matlab" : 0,"Python": 0,"C": 0,"Microcontrolleur": 0,"VHDL": 0,"Microprocesseur": 0,"Electronique": 0,"Probabilite": 0,"Reseau": 0,"IA": 0}
         self.interet_entreprises = entreprises = {
             "Thales": 0,
@@ -124,7 +124,7 @@ class Etudiant:
         }
         
     def student_CYB(self):
-
+        self.domaine_interets["Automotive"]   = random.choices([1,2,3,4,5], weights=[0.217 ,0.239,0.239 ,0.217,0.087])[0]
         self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.109, 0.217, 0.326, 0.217, 0.130])[0]
         self.domaine_interets["Construction"] = random.choices([1, 2, 3, 4, 5], weights=[0.304, 0.370, 0.239, 0.087, 0.000])[0]
         self.domaine_interets["Tourism"] = random.choices([1, 2, 3, 4, 5], weights=[0.457, 0.087, 0.261, 0.130, 0.065])[0]
