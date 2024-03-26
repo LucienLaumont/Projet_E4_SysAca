@@ -36,6 +36,21 @@ class Etudiant:
 
 
     def student_AIC(self):
+        self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.211, 0.211, 0.211, 0.263, 0.105])[0]
+        self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.211, 0.158, 0.316, 0.263, 0.053])[0]
+        self.domaine_interets["Construction"] = random.choices([1, 2, 3, 4, 5], weights=[0.579, 0.105, 0.263, 0.053, 0.0])[0]
+        self.domaine_interets["Tourism"] = random.choices([1, 2, 3, 4, 5], weights=[0.421, 0.105, 0.158, 0.263, 0.053])[0]
+        self.domaine_interets["Communication"] = random.choices([1, 2, 3, 4, 5], weights=[0.0, 0.053, 0.158, 0.421, 0.368])[0]
+        self.domaine_interets["Finance"] = random.choices([1, 2, 3, 4, 5], weights=[0.211, 0.105, 0.211, 0.263, 0.211])[0]
+        self.domaine_interets["Education"] = random.choices([1, 2, 3, 4, 5], weights=[0.158, 0.263, 0.263, 0.158, 0.158])[0]
+        self.domaine_interets["Energy"] = random.choices([1, 2, 3, 4, 5], weights=[0.368, 0.211, 0.211, 0.105, 0.105])[0]
+        self.domaine_interets["Farming"] = random.choices([1, 2, 3, 4, 5], weights=[0.526, 0.263, 0.211, 0.0, 0.0])[0]
+        self.domaine_interets["Telecom"] = random.choices([1, 2, 3, 4, 5], weights=[0.105, 0.211, 0.526, 0.158, 0.0])[0]
+        self.domaine_interets["Pharmaceutical"] = random.choices([1, 2, 3, 4, 5], weights=[0.421, 0.263, 0.105, 0.158, 0.053])[0]
+        self.domaine_interets["Media"] = random.choices([1, 2, 3, 4, 5], weights=[0.053, 0.105, 0.316, 0.526, 0.0])[0]
+        self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.158, 0.368, 0.316, 0.158, 0.0])[0]
+        self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.105, 0.053, 0.211, 0.316, 0.316])[0]
+
         
         self.interet_entreprises = {
             "Thales": random.choices([1, 0], weights=[0.895, 0.105])[0],
