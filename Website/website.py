@@ -6,8 +6,6 @@ from dash import Output,Input,State
 
 server = Flask(__name__)
 
-model = generate_model()
-
 dropdown_options_E = [
     {'label': 'EL-3012', 'value': 'EL-3012'},
     {'label': 'EL-3013', 'value': 'EL-3013'},
@@ -93,23 +91,48 @@ app_quiz_page.layout = html.Div([
 ], className='container')
 
 
-app_quiz_page = Dash(server=server, routes_pathname_prefix='/resultat/')
-app_quiz_page.layout = html.Div([
+app_resultat_page = Dash(server=server, routes_pathname_prefix='/resultat/')
+app_resultat_page.layout = html.Div([
     dcc.Location(id='url', refresh=False),
+    html.Div(id='result_image_container')  # Ce conteneur affichera l'image basée sur la prédiction
+])
+
+from dash import dcc, html, callback, callback_context
+from dash.exceptions import PreventUpdate
 
 @app_quiz_page.callback(
-    Output('output-container-button', 'children'),
+    Output('url', 'pathname'),
     [Input('submit-val', 'n_clicks')],
     [State(f'{entreprise}', 'value') for entreprise in entreprises] +
     [State(f'{domaine}', 'value') for domaine in domaines] +
     [State('dropdown_E', 'value'), State('dropdown_F', 'value')]
 )
-def update_output(n_clicks, *values):
+def redirect_to_result(n_clicks, *values):
     if n_clicks > 0:
         prediction = prediction_etudiant(values,domaines,entreprises,[option['value'] for option in dropdown_options_E + dropdown_options_F])
-        return f'Vous avez cliqué {n_clicks} fois. Valeurs: {model.predict(prediction)}'
+        prediction = model.predict(prediction)
+        result_path = f"/resultat/?prediction={prediction}"
+        return result_path
     else:
-        return 'Cliquez sur le bouton pour afficher les résultats'
+        raise PreventUpdate
+
+import urllib.parse
+
+@app_resultat_page.callback(
+    Output('result_image_container', 'children'),  # Mettez à jour cet Output pour correspondre à l'ID du nouveau conteneur
+    [Input('url', 'search')]
+)
+def display_result(search):
+    query = urllib.parse.parse_qs(urllib.parse.urlparse(search).query)
+    prediction = query.get('prediction', [''])[0]
+    print(prediction)
+    if prediction:
+        # Construire le chemin vers l'image basée sur la prédiction
+        image_src = f'/assets/{prediction}.jpg'
+        # Retourner l'élément img pour être affiché dans le conteneur
+        return html.Img(src=image_src, style={"width": "100%", "height": "auto"})
+    return "Aucune prédiction fournie"
 
 if __name__ == "__main__":
+    model = generate_model()
     server.run(debug=True)
