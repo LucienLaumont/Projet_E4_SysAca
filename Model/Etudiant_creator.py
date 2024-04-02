@@ -1,11 +1,14 @@
 import random
+import csv
 
 class Etudiant:
     def __init__(self,filiere):
+        # self.nom                 = nom
+        # self.prenom              = prenom
         self.filiere             = filiere
         self.domaine_interets    = {"Automotive": 0,"Environment": 0,"Construction": 0,"Tourism": 0,"Communication":0,"Finance":0,"Education":0,"Energy":0,"Farming":0,"Telecom":0,"Pharmaceutical":0,"Media":0,"Logistics":0,"Aerospace":0}
         self.niveau_outils       = {"Matlab" : 0,"Python": 0,"C": 0,"Microcontrolleur": 0,"VHDL": 0,"Microprocesseur": 0,"Electronique": 0,"Probabilite": 0,"Reseau": 0,"IA": 0}
-        self.interet_entreprises = {
+        self.interet_entreprises = entreprises = {
             "Thales": 0,
             "Orange": 0,
             "Siemens": 0,
@@ -14,7 +17,7 @@ class Etudiant:
             "Renault": 0,
             "Dassault systeme": 0,
             "BNP Paribas": 0,
-            "L'Oreal": 0,
+            "Loreal": 0,
             "EQUANS": 0
         }
 
@@ -36,23 +39,25 @@ class Etudiant:
             'Microcontroleurs': 0
         }
 
-        self.choix_ouap = {
-            'Fondamentaux_Energie_Thermique': 0,
-            'Systeme_Exploitation': 0,
-            'Cybersecurite_avance': 0,
-            'Digital_Hardware': 0,
-            'Data_Science': 0,
-            'Modelisation_Effets_Therapeutique': 0,
-            'Programation_Sys_Exploitation': 0,
-            'IA_Deep_Learning': 0,
-            'Robotique': 0,
-            'Simulation_Pilotage_Flux': 0,
-            'Reseaux_Avances': 0,
-            'Biologie_Moleculaire': 0,
-            'Programmation_C_Projet_Jeux': 0,
-            'Fondamentaux_Energie_Elec': 0
+        self.choix_ouap_E = {
+            'EL-3012': 0,
+            'EL-3013': 0,
+            'EL-3019': 0,
+            'EL-3020': 0,
+            'EL-3025': 0,
+            'EL-3031': 0,
+            'EL-3035': 0,
         }
 
+        self.choix_ouap_F = {
+            'EL-3017': 0,
+            'EL-3034':0,
+            'EL-3003':0,
+            'EL-3005':0,
+            'EL-3007':0,
+            'EL-3023':0,
+            'EL-3027':0
+        }
 
     def create_student(self):
         method_name = f"student_{self.filiere}"
@@ -62,7 +67,7 @@ class Etudiant:
             return self.student_default()
 
 
-    def student_DSIA(self):
+    def student_DSI(self):
 
         self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.345, 0.655])[0]
         self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.691, 0.309])[0]
@@ -72,7 +77,7 @@ class Etudiant:
         self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.818, 0.182])[0]
         self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.527, 0.473])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[0.436, 0.564])[0]
-        self.interet_entreprises["L'Oreal"] = random.choices([1, 0], weights=[0.673, 0.327])[0]
+        self.interet_entreprises["Loreal"] = random.choices([1, 0], weights=[0.673, 0.327])[0]
         self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[0.964, 0.036])[0]
         
         self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.2, 0.345, 0.236, 0.091, 0.127])[0]
@@ -90,6 +95,21 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.236, 0.255, 0.291, 0.164, 0.055])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.073, 0.145, 0.273, 0.218, 0.291])[0]
 
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0.1,0.047619048,0.527272727,0,	0.2,0.117647059,0.058823529])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.5625,	0.083333333,0.115384615,0.086956522,0.090909091,0.058823529,0.181818182])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
 
     def student_AIC(self):
         self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.211, 0.211, 0.211, 0.263, 0.105])[0]
@@ -117,12 +137,29 @@ class Etudiant:
             "Renault": random.choices([1, 0], weights=[0.263, 0.737])[0],
             "Dassault systeme": random.choices([1, 0], weights=[0.579, 0.421])[0],
             "BNP Paribas": random.choices([1, 0], weights=[0.421, 0.579])[0],
-            "L'Oreal": random.choices([1, 0], weights=[0.105, 0.895])[0],
+            "Loreal": random.choices([1, 0], weights=[0.105, 0.895])[0],
             "EQUANS": random.choices([1, 0], weights=[0, 0.1])[0]
         }
         
-    def student_CYB(self):
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0.15,0.095238095,0.127272727,0.111111111,0.3,0,0])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
 
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.145833333,0,	0.076923077,0.260869565,0.090909091,0,0.136363636])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
+
+
+
+    def student_CYB(self):
         self.domaine_interets["Automotive"]   = random.choices([1,2,3,4,5], weights=[0.217 ,0.239,0.239 ,0.217,0.087])[0]
         self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.109, 0.217, 0.326, 0.217, 0.130])[0]
         self.domaine_interets["Construction"] = random.choices([1, 2, 3, 4, 5], weights=[0.304, 0.370, 0.239, 0.087, 0.000])[0]
@@ -147,14 +184,29 @@ class Etudiant:
             "Renault": random.choices([1, 0], weights=[0.196, 0.804])[0],
             "Dassault systeme": random.choices([1, 0], weights=[0.5, 0.5])[0],
             "BNP Paribas": random.choices([1, 0], weights=[0.348, 0.652])[0],
-            "L'Oreal": random.choices([1, 0], weights=[0.13, 0.87])[0],
+            "Loreal": random.choices([1, 0], weights=[0.13, 0.87])[0],
             "EQUANS": random.choices([1, 0], weights=[0.109, 0.891])[0]
         }
         
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0.45,0.047619048,0.072727273,0,0.25,0,0.058823529])[0]
         
-    def student_GI(self):
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.104166667,0.083333333,0.038461538,0.304347826,0.181818182,0,0.181818182])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
+
+    def student_GI_(self):
         self.domaine_interets["Automotive"]      = random.choices([1,2,3,4,5], weights=[0.114 ,0.114,0.171 ,0.343,0.257])[0]
-        self.domaine_interets["Environnement"]    = random.choices([1,2,3,4,5], weights=[0.057 ,0.200,0.286,0.343,0.114])[0]
+        self.domaine_interets["Environment"]    = random.choices([1,2,3,4,5], weights=[0.057 ,0.200,0.286,0.343,0.114])[0]
         self.domaine_interets["Construction"]     = random.choices([1,2,3,4,5], weights=[0.200,0.143,0.400,0.229,0.029])[0]
         self.domaine_interets["Tourism"]          = random.choices([1,2,3,4,5], weights=[0.343,0.229,0.171,0.114,0.143])[0]
         self.domaine_interets["Communication"]    = random.choices([1,2,3,4,5], weights=[0.114,0.257,0.286,0.286,0.057])[0]
@@ -174,28 +226,43 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0,1], weights=[0.914, 0.086])[0]
         self.interet_entreprises["Safran"] = random.choices([0,1], weights=[0.314, 0.686])[0]
         self.interet_entreprises["Renault"] = random.choices([0,1], weights=[0.514, 0.486])[0]
-        self.interet_entreprises["Dassault_systeme"] = random.choices([0,1], weights=[0.429, 0.571])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([0,1], weights=[0.429, 0.571])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([0,1], weights=[1, 0])[0]
-        self.interet_entreprises["L'Oreal"] = random.choices([0,1], weights=[0.543, 0.457])[0]
-        self.interet_entreprises["Equans"] = random.choices([0,1], weights=[0.914, 0.086])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0,1], weights=[0.543, 0.457])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0,1], weights=[0.914, 0.086])[0]
 
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0,0.095238095,0.145454545,0,0.05,0.117647059,0.058823529])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
 
-    def student_SE(self):
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.020833333,0.083333333,0.038461538,0.130434783,0.454545455,0.176470588,0])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
+
+    def student_SE_(self):
         # Logique pour créer un étudiant en SE
-        self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.071, 0.107, 0.286, 0.250, 0.286])[0]
-        self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.089, 0.286, 0.357, 0.179, 0.089])[0]
-        self.domaine_interets["Construction"] = random.choices([1, 2, 3, 4, 5], weights=[0.357, 0.357, 0.196, 0.071, 0.018])[0]
-        self.domaine_interets["Tourism"] = random.choices([1, 2, 3, 4, 5], weights=[0.518, 0.232, 0.143, 0.071, 0.036])[0]
-        self.domaine_interets["Communication"] = random.choices([1, 2, 3, 4, 5], weights=[0.054, 0.250, 0.375, 0.071, 0.250])[0]
-        self.domaine_interets["Finance"] = random.choices([1, 2, 3, 4, 5], weights=[0.339, 0.250, 0.268, 0.071, 0.071])[0]
-        self.domaine_interets["Education"] = random.choices([1, 2, 3, 4, 5], weights=[0.268, 0.304, 0.232, 0.161, 0.036])[0]
-        self.domaine_interets["Energy"] = random.choices([1, 2, 3, 4, 5], weights=[0.143, 0.375, 0.214, 0.232, 0.036])[0]
-        self.domaine_interets["Farming"] = random.choices([1, 2, 3, 4, 5], weights=[0.482, 0.232, 0.196, 0.054, 0.036])[0]
-        self.domaine_interets["Telecom"] = random.choices([1, 2, 3, 4, 5], weights=[0.179, 0.393, 0.250, 0.125, 0.054])[0]
-        self.domaine_interets["Pharmaceutical"] = random.choices([1, 2, 3, 4, 5], weights=[0.518, 0.250, 0.125, 0.089, 0.018])[0]
-        self.domaine_interets["Media"] = random.choices([1, 2, 3, 4, 5], weights=[0.179, 0.161, 0.339, 0.161, 0.161])[0]
-        self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.179, 0.143, 0.214, 0.268, 0.196])[0]
-        self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.054, 0.054, 0.107, 0.125, 0.661])[0]
+        self.domaine_interets["Automotive"]      = random.choices([1,2,3,4,5], weights=[0.071, 0.107, 0.286, 0.250, 0.286])[0]
+        self.domaine_interets["Environment"]    = random.choices([1,2,3,4,5], weights=[0.089, 0.286, 0.357, 0.179, 0.089])[0]
+        self.domaine_interets["Construction"]     = random.choices([1,2,3,4,5], weights=[0.357, 0.357, 0.196, 0.071, 0.018])[0]
+        self.domaine_interets["Tourism"]          = random.choices([1,2,3,4,5], weights=[0.518, 0.232, 0.143, 0.071, 0.036])[0]
+        self.domaine_interets["Communication"]    = random.choices([1,2,3,4,5], weights=[0.054, 0.250, 0.375, 0.071, 0.250])[0]
+        self.domaine_interets["Finance"]          = random.choices([1,2,3,4,5], weights=[0.339, 0.250, 0.268, 0.071, 0.071])[0]
+        self.domaine_interets["Education"]        = random.choices([1,2,3,4,5], weights=[0.268, 0.304, 0.232, 0.161, 0.036])[0]
+        self.domaine_interets["Energy"]           = random.choices([1,2,3,4,5], weights=[0.143, 0.375, 0.214, 0.232, 0.036])[0]
+        self.domaine_interets["Farming"]          = random.choices([1,2,3,4,5], weights=[0.482, 0.232, 0.196, 0.054, 0.036])[0]
+        self.domaine_interets["Telecom"]          = random.choices([1,2,3,4,5], weights=[0.179, 0.393, 0.250, 0.125, 0.054])[0]
+        self.domaine_interets["Pharmaceutical"]   = random.choices([1,2,3,4,5], weights=[0.518, 0.250, 0.125, 0.089, 0.018])[0]
+        self.domaine_interets["Media"]            = random.choices([1,2,3,4,5], weights=[0.179, 0.161, 0.339, 0.161, 0.161])[0]
+        self.domaine_interets["Logistics"]        = random.choices([1,2,3,4,5], weights=[0.179, 0.143, 0.214, 0.268, 0.196])[0]
+        self.domaine_interets["Aerospace"]        = random.choices([1,2,3,4,5], weights=[0.054, 0.054, 0.107, 0.125, 0.661])[0]
 
         self.interet_entreprises["Thales"] = random.choices([0,1], weights=[0.286, 0.714])[0]
         self.interet_entreprises["Orange"] = random.choices([0,1], weights=[0.929, 0.071])[0]
@@ -203,11 +270,26 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0,1], weights=[0.964, 0.036])[0]
         self.interet_entreprises["Safran"] = random.choices([0,1], weights=[0.232, 0.768])[0]
         self.interet_entreprises["Renault"] = random.choices([0,1], weights=[0.643, 0.357])[0]
-        self.interet_entreprises["Dassault_systeme"] = random.choices([0,1], weights=[0.357, 0.643])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([0,1], weights=[0.357, 0.643])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([0,1], weights=[0.946, 0.054])[0]
-        self.interet_entreprises["L'Oreal"] = random.choices([0,1], weights=[0.929, 0.071])[0]
-        self.interet_entreprises["Equans"] = random.choices([0,1], weights=[1, 0])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0,1], weights=[0.929, 0.071])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0,1], weights=[1, 0])[0]
 
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0,0.19047619,0.018181818,0.555555556,0.05,0,0.117647059])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.041666667,0.083333333,0.307692308,0,0,0.058823529,0.045454545])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
 
     def student_SEI(self):
         # Logique pour créer un étudiant en SEI
@@ -234,8 +316,24 @@ class Etudiant:
         self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.467, 0.533])[0]
         self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.6, 0.4])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
-        self.interet_entreprises["L'Oreal"] = random.choices([1, 0], weights=[0.8, 0.2])[0]
+        self.interet_entreprises["Loreal"] = random.choices([1, 0], weights=[0.8, 0.2])[0]
         self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
+
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0.05,0.523809524,0.036363636,0.111111111,0,0,0])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.0625,0,0.269230769,0.130434783,0.090909091,0,0.045454545])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
 
 
     def student_ENE(self):
@@ -261,11 +359,26 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.129, 0.871])[0]
         self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.677, 0.323])[0]
         self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.742, 0.258])[0]
-        self.interet_entreprises["Dassault Systeme"] = random.choices([0, 1], weights=[0.710, 0.290])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([0, 1], weights=[0.710, 0.290])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([0, 1], weights=[0.839, 0.161])[0]
-        self.interet_entreprises["LOreal"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
         self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[0.613, 0.387])[0]
 
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0,0,0,0,0.05,0.058823529,0.6470588240])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0,0.666666667,0.038461538,0,0,0.117647059,0.090909091])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
 
     
     def student_BIO(self):
@@ -293,9 +406,24 @@ class Etudiant:
         self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.958, 0.042])[0]
         self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.708, 0.292])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[0.917, 0.083])[0]
-        self.interet_entreprises["L'Oreal"] = random.choices([1, 0], weights=[0.292, 0.708])[0]
+        self.interet_entreprises["Loreal"] = random.choices([1, 0], weights=[0.292, 0.708])[0]
         self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
 
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0,0,0.018181818,0.111111111,0.05,0.647058824,0.058823529])[0]
+        
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.041666667,0,0.076923077,0,0.090909091,0.588235294,0])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
 
     def student_INF(self):
         # Logique pour créer un étudiant en INF
@@ -320,12 +448,27 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.946, 0.054])[0]
         self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.703, 0.297])[0]
         self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
-        self.interet_entreprises["Dassault Systeme"] = random.choices([0, 1], weights=[0.514, 0.486])[0]
+        self.interet_entreprises["Dassault systeme"] = random.choices([0, 1], weights=[0.514, 0.486])[0]
         self.interet_entreprises["BNP Paribas"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
-        self.interet_entreprises["LOreal"] = random.choices([0, 1], weights=[0.919, 0.081])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.919, 0.081])[0]
         self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[1.000, 0.000])[0]
 
+        Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0.25,0,0.054545455,0.111111111,0.05,0.058823529,0])[0]
         
+        for ouap in self.choix_ouap_E:
+            if ouap == Choix_E:
+                self.choix_ouap_E[ouap] = 1
+            else:
+                self.choix_ouap_E[ouap] = 0
+
+        Choix_F = random.choices(['EL-3003','EL-3005','EL-3007','EL-3017','EL-3023','EL-3027','EL-3034'], weights=[0.020833333,0,0.038461538,0.086956522,0,0,0.318181818])[0]
+
+        for ouapF in self.choix_ouap_F:
+            if ouapF == Choix_F:
+                self.choix_ouap_F[ouapF] = 1
+            else:
+                self.choix_ouap_F[ouapF] = 0
+
 
 
     def student_default(self):
@@ -333,10 +476,100 @@ class Etudiant:
         pass
 
 
-# Exemple d'utilisation :
-etudiant1 = Etudiant("AIC")
-etudiant1.create_student()
-print("Filière:", etudiant1.filiere)
-print("Domaines d'intérêt:", etudiant1.domaine_interets)
-print("Niveau d'outils:", etudiant1.niveau_outils)
-print("Intérêt pour les entreprises:", etudiant1.interet_entreprises)
+# # Exemple d'utilisation :
+# etudiant1 = Etudiant("nom","prenom", "DSIA")
+# etudiant1.create_student()
+# print("Nom:", etudiant1.nom)
+# print("Prénom:", etudiant1.prenom)
+# print("Filière:", etudiant1.filiere)
+# print("Domaines d'intérêt:", etudiant1.domaine_interets)
+# print("Niveau d'outils:", etudiant1.niveau_outils)
+# print("Intérêt pour les entreprises:", etudiant1.interet_entreprises)
+
+def save_students_to_csv(filename, students):
+    with open(filename, mode='w', newline='') as file:
+        writer = csv.writer(file)
+        # En-tête du CSV avec les noms des entreprises et des domaines
+        header = ['Filiere'] + list(students[0].interet_entreprises.keys()) + list(students[0].domaine_interets.keys())+ list(students[0].choix_ouap_E.keys())+ list(students[0].choix_ouap_F.keys())
+        writer.writerow(header)
+        
+        for student in students:
+            row = [student.filiere] + list(student.interet_entreprises.values()) + list(student.domaine_interets.values()) + list(student.choix_ouap_E.values())+ list(student.choix_ouap_F.values())
+            writer.writerow(row)
+
+effectif = 1000
+# Générer 100 étudiants de la filière DSIA
+students_bio = [Etudiant("BIO") for _ in range(effectif)]
+for student in students_bio:
+    student.create_student()
+
+students_cyb = [Etudiant("CYB") for _ in range(effectif)]
+for student in students_cyb:
+    student.create_student()
+
+students_aic = [Etudiant("AIC") for _ in range(effectif)]
+for student in students_aic :
+    student.create_student()
+
+students_inf = [Etudiant("INF") for _ in range(effectif)]
+for student in students_inf:
+    student.create_student()
+
+students_gi = [Etudiant("GI_") for _ in range(effectif)]
+for student in students_gi :
+    student.create_student()
+
+
+students_dsi = [Etudiant("DSI") for _ in range(effectif)]
+for student in students_dsi :
+    student.create_student()
+
+
+
+students_sei = [Etudiant("SEI") for _ in range(effectif)]
+for student in students_sei :
+    student.create_student()
+
+
+students_se = [Etudiant("SE_") for _ in range(effectif)]
+for student in students_se :
+    student.create_student()
+
+
+students_ene = [Etudiant("ENE") for _ in range(effectif)]
+for student in students_ene :
+    student.create_student()
+
+all_students = students_dsi + students_sei + students_se + students_cyb + students_aic + students_inf + students_bio + students_ene + students_gi
+# Enregistrer les étudiants dans un fichier CSV
+save_students_to_csv('etudiants_dsia.csv', all_students)
+
+student_1 = students_bio[0]
+print("Clés et valeurs associées pour l'étudiant ENE:")
+student_2 = students_ene[0]
+
+for key, value in student_1.interet_entreprises.items():
+    print(f"Entreprise: {key}, Intérêt: {value}")
+for key, value in student_1.domaine_interets.items():
+    print(f"Domaine d'intérêt: {key}, Niveau: {value}")
+
+print("================================")
+
+for key, value in student_2.interet_entreprises.items():
+    print(f"Entreprise: {key}, Intérêt: {value}")
+for key, value in student_2.domaine_interets.items():
+    print(f"Domaine d'intérêt: {key}, Niveau: {value}")
+
+
+
+# Récupérer les clés de la méthode student_CYB
+keys_CYB = set(students_aic[0].domaine_interets.keys())
+
+# Récupérer les clés de la méthode student_GI_
+keys_GI_ = set(students_gi[0].domaine_interets.keys())
+
+# Vérifier si les ensembles de clés sont identiques
+if keys_CYB == keys_GI_:
+    print("Toutes les clés sont identiques entre student_CYB et student_GI_.")
+else:
+    print("Les ensembles de clés ne sont pas identiques entre student_CYB et student_GI_.")
