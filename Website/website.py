@@ -1,6 +1,12 @@
 # Serveur central Flask
 from flask import Flask
+from model import generate_model,prediction_etudiant
+
+from dash import Output,Input,State
+
 server = Flask(__name__)
+
+model = generate_model()
 
 dropdown_options_E = [
     {'label': 'EL-3012', 'value': 'EL-3012'},
@@ -26,8 +32,6 @@ domaines =['Automotive','Environment','Construction','Tourism','Communication','
 
 entreprises = ['Thales', 'Orange', 'Siemens', 'Engie', 'Safran', 'Renault', 'Dassault systeme', 'BNP Paribas', 'Loreal', 'EQUANS']
 
-
-
 # Première application Dash
 from dash import Dash, html, dcc
 
@@ -38,12 +42,12 @@ app_front_page.layout = html.Div(className = 'wallpaper-rectangle',children = [
         html.H1("QUELLE EST TA FILIERE ?", className='title-mainpage')
     ]),
     html.Div(className='button-rectangle', id='my-button', children=[
-        html.A("COMMENCE LE QUIZ !", href="/frontend/", className="button-mainpage")
+        html.A("COMMENCE LE QUIZ !", href="/quiz/", className="button-mainpage")
     ])
 ])
 
 # Seconde application Dash
-app_quiz_page = Dash(server=server, routes_pathname_prefix='/frontend/')
+app_quiz_page = Dash(server=server, routes_pathname_prefix='/quiz/')
 app_quiz_page.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.H1("Trouve ta filière ! "),
@@ -87,6 +91,25 @@ app_quiz_page.layout = html.Div([
         html.Div(id='output-container-button', children='Voir les résultats', className='result-text')
     ])
 ], className='container')
+
+
+app_quiz_page = Dash(server=server, routes_pathname_prefix='/resultat/')
+app_quiz_page.layout = html.Div([
+    dcc.Location(id='url', refresh=False),
+
+@app_quiz_page.callback(
+    Output('output-container-button', 'children'),
+    [Input('submit-val', 'n_clicks')],
+    [State(f'{entreprise}', 'value') for entreprise in entreprises] +
+    [State(f'{domaine}', 'value') for domaine in domaines] +
+    [State('dropdown_E', 'value'), State('dropdown_F', 'value')]
+)
+def update_output(n_clicks, *values):
+    if n_clicks > 0:
+        prediction = prediction_etudiant(values,domaines,entreprises,[option['value'] for option in dropdown_options_E + dropdown_options_F])
+        return f'Vous avez cliqué {n_clicks} fois. Valeurs: {model.predict(prediction)}'
+    else:
+        return 'Cliquez sur le bouton pour afficher les résultats'
 
 if __name__ == "__main__":
     server.run(debug=True)
