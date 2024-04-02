@@ -1,0 +1,57 @@
+
+
+.wallpaper-rectangle {
+
+    background-image: url('WallPaper_4.jpg'); /* Mettez le chemin correct vers votre image */
+    background-size: cover; /* Assure que l'image de fond couvre entièrement le rectangle */
+    background-position: center; /* Centrer l'image de fond dans le rectangle */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    width: 100%; /* ou une largeur spécifique si vous le souhaitez */
+    height: 97vh; /* ou la hauteur que vous désirez */
+    margin: 10px 0; /* Espacement autour du rectangle */
+    display: flex;
+}
+
+.title-rectangle {
+    position: absolute;
+    top: 25vh;
+    left: 30%;
+    background-color: rgb(255, 255, 255);  /* Assure que l'image de fond couvre entièrement le rectangle */
+    color: rgb(0, 0, 0);
+    width: 50%; /* Ajusté pour la démonstration */
+    height: 40vh;
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    padding: 30px; /* Ajouté pour un peu d'espace à l'intérieur */
+    box-sizing: border-box; /* Assure que le padding ne change pas les dimensions */
+}
+
+
+.title-mainpage {
+    font-family: 'Arial', sans-serif;
+    font-size: 6em;
+    font-weight: bold;
+}
+ 
+.button-rectangle {
+
+    position: absolute;
+    top: 70vh;
+    left: 35%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    width: 43%; /* ou une largeur spécifique si vous le souhaitez */
+    height: 20vh; /* ou la hauteur que vous désirez */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    padding: 30px; /* Ajouté pour un peu d'espace à l'intérieur */
+    box-sizing: border-box; /* Assure que le padding ne change pas les dimensions */
+}
+
+.button-mainpage {
+    font-family: 'Arial', sans-serif;
+    font-size: 4em;
+    font-weight: bold;
+}
