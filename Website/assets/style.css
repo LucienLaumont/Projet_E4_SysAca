@@ -2,10 +2,9 @@
 
 .wallpaper-rectangle {
 
-    background-image: url('WallPaper_4.jpg'); /* Mettez le chemin correct vers votre image */
+    background-image: url('WallPaper_4.jpg');
     background-size: cover; /* Assure que l'image de fond couvre entièrement le rectangle */
     background-position: center; /* Centrer l'image de fond dans le rectangle */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image */
     width: 100%; /* ou une largeur spécifique si vous le souhaitez */
     height: 97vh; /* ou la hauteur que vous désirez */
     margin: 10px 0; /* Espacement autour du rectangle */
@@ -52,19 +51,13 @@
 
 .button-mainpage {
     font-family: 'Arial', sans-serif;
-    font-size: 4em;
+    font-size: 3em;
     font-weight: bold;
 }
 
 /* A partir d'ici ca correspond à la mise en page de la page avec le quiz*/
 
-    /* Style pour le conteneur principal */
-body {
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2; 
-}
+/* Style pour le conteneur principal */
 
 /* Style pour le conteneur des éléments */
 .container {
@@ -75,13 +68,6 @@ body {
     border-radius: 10px; /* Coins arrondis */
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1); 
 }
-
-/*Style pour les titres*/
-h1, h3 {
-    text-align: center; /* Centrage */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractère */
-    padding: 20px,
-} 
 
 .Titre_box{
     font-size:30px;

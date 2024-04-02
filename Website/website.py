@@ -1,9 +1,6 @@
-import dash
-import dash_core_components as dcc
-import dash_html_components as html
-from dash.dependencies import Input, Output
-
-app = dash.Dash(__name__)
+# Serveur central Flask
+from flask import Flask
+server = Flask(__name__)
 
 dropdown_options_E = [
     {'label': 'EL-3012', 'value': 'EL-3012'},
@@ -30,7 +27,24 @@ domaines =['Automotive','Environment','Construction','Tourism','Communication','
 entreprises = ['Thales', 'Orange', 'Siemens', 'Engie', 'Safran', 'Renault', 'Dassault systeme', 'BNP Paribas', 'Loreal', 'EQUANS']
 
 
-app.layout = html.Div([
+
+# Première application Dash
+from dash import Dash, html, dcc
+
+app_front_page = Dash(server=server, routes_pathname_prefix='/')
+app_front_page.layout = html.Div(className = 'wallpaper-rectangle',children = [
+    dcc.Location(id='url', refresh=False),
+    html.Div(className='title-rectangle', children=[
+        html.H1("QUELLE EST TA FILIERE ?", className='title-mainpage')
+    ]),
+    html.Div(className='button-rectangle', id='my-button', children=[
+        html.A("COMMENCE LE QUIZ !", href="/frontend/", className="button-mainpage")
+    ])
+])
+
+# Seconde application Dash
+app_quiz_page = Dash(server=server, routes_pathname_prefix='/frontend/')
+app_quiz_page.layout = html.Div([
     dcc.Location(id='url', refresh=False),
     html.H1("Trouve ta filière ! "),
     html.Div([
@@ -74,19 +88,5 @@ app.layout = html.Div([
     ])
 ], className='container')
 
-#### Pas fait : 
-@app.callback(
-    Output('output-container-button', 'children'),
-    [Input('submit-val', 'n_clicks')],
-    [dash.dependencies.State('domaine', 'value'),
-     dash.dependencies.State('ouap', 'value'),
-     dash.dependencies.State('entreprise', 'value')])
-def update_output(n_clicks, domaine, ouap, entreprise):
-    if n_clicks > 0:
-        return f'Vous avez cliqué {n_clicks} fois. Domaine: {domaine}, Ouap: {ouap}, Entreprise: {entreprise}'
-    else:
-        return 'Cliquez sur le bouton pour afficher les résultats'
-######
-
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == "__main__":
+    server.run(debug=True)
