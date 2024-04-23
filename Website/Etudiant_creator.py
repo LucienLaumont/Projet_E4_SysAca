@@ -15,8 +15,8 @@ class Etudiant:
             "Engie": 0,
             "Safran": 0,
             "Renault": 0,
-            "Dassault systeme": 0,
-            "BNP Paribas": 0,
+            "Dassault-systeme": 0,
+            "BNP-Paribas": 0,
             "Loreal": 0,
             "EQUANS": 0
         }
@@ -69,16 +69,16 @@ class Etudiant:
 
     def student_DSI(self):
 
-        self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.345, 0.655])[0]
-        self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.691, 0.309])[0]
-        self.interet_entreprises["Siemens"] = random.choices([1, 0], weights=[0.945, 0.055])[0]
-        self.interet_entreprises["Engie"] = random.choices([1, 0], weights=[0.927, 0.073])[0]
-        self.interet_entreprises["Safran"] = random.choices([1, 0], weights=[0.564, 0.436])[0]
-        self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.818, 0.182])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.527, 0.473])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[0.436, 0.564])[0]
-        self.interet_entreprises["Loreal"] = random.choices([1, 0], weights=[0.673, 0.327])[0]
-        self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[0.964, 0.036])[0]
+        self.interet_entreprises["Thales"] = random.choices([0, 1], weights=[0.345, 0.655])[0]
+        self.interet_entreprises["Orange"] = random.choices([0, 1], weights=[0.691, 0.309])[0]
+        self.interet_entreprises["Siemens"] = random.choices([0, 1], weights=[0.945, 0.055])[0]
+        self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.927, 0.073])[0]
+        self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.564, 0.436])[0]
+        self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.818, 0.182])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0, 1], weights=[0.527, 0.473])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0, 1], weights=[0.436, 0.564])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.673, 0.327])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[0.964, 0.036])[0]
         
         self.domaine_interets["Automotive"] = random.choices([1, 2, 3, 4, 5], weights=[0.2, 0.345, 0.236, 0.091, 0.127])[0]
         self.domaine_interets["Environment"] = random.choices([1, 2, 3, 4, 5], weights=[0.127, 0.073, 0.473, 0.182, 0.145])[0]
@@ -135,8 +135,8 @@ class Etudiant:
             "Engie": random.choices([1, 0], weights=[0.053, 0.947])[0],
             "Safran": random.choices([1, 0], weights=[0.526, 0.474])[0],
             "Renault": random.choices([1, 0], weights=[0.263, 0.737])[0],
-            "Dassault systeme": random.choices([1, 0], weights=[0.579, 0.421])[0],
-            "BNP Paribas": random.choices([1, 0], weights=[0.421, 0.579])[0],
+            "Dassault-systeme": random.choices([1, 0], weights=[0.579, 0.421])[0],
+            "BNP-Paribas": random.choices([1, 0], weights=[0.421, 0.579])[0],
             "Loreal": random.choices([1, 0], weights=[0.105, 0.895])[0],
             "EQUANS": random.choices([1, 0], weights=[0, 0.1])[0]
         }
@@ -182,8 +182,8 @@ class Etudiant:
             "Engie": random.choices([1, 0], weights=[0.13, 0.87])[0],
             "Safran": random.choices([1, 0], weights=[0.283, 0.717])[0],
             "Renault": random.choices([1, 0], weights=[0.196, 0.804])[0],
-            "Dassault systeme": random.choices([1, 0], weights=[0.5, 0.5])[0],
-            "BNP Paribas": random.choices([1, 0], weights=[0.348, 0.652])[0],
+            "Dassault-systeme": random.choices([1, 0], weights=[0.5, 0.5])[0],
+            "BNP-Paribas": random.choices([1, 0], weights=[0.348, 0.652])[0],
             "Loreal": random.choices([1, 0], weights=[0.13, 0.87])[0],
             "EQUANS": random.choices([1, 0], weights=[0.109, 0.891])[0]
         }
@@ -226,8 +226,8 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0,1], weights=[0.914, 0.086])[0]
         self.interet_entreprises["Safran"] = random.choices([0,1], weights=[0.314, 0.686])[0]
         self.interet_entreprises["Renault"] = random.choices([0,1], weights=[0.514, 0.486])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([0,1], weights=[0.429, 0.571])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([0,1], weights=[1, 0])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0,1], weights=[0.429, 0.571])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0,1], weights=[1, 0])[0]
         self.interet_entreprises["Loreal"] = random.choices([0,1], weights=[0.543, 0.457])[0]
         self.interet_entreprises["EQUANS"] = random.choices([0,1], weights=[0.914, 0.086])[0]
 
@@ -270,8 +270,8 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0,1], weights=[0.964, 0.036])[0]
         self.interet_entreprises["Safran"] = random.choices([0,1], weights=[0.232, 0.768])[0]
         self.interet_entreprises["Renault"] = random.choices([0,1], weights=[0.643, 0.357])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([0,1], weights=[0.357, 0.643])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([0,1], weights=[0.946, 0.054])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0,1], weights=[0.357, 0.643])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0,1], weights=[0.946, 0.054])[0]
         self.interet_entreprises["Loreal"] = random.choices([0,1], weights=[0.929, 0.071])[0]
         self.interet_entreprises["EQUANS"] = random.choices([0,1], weights=[1, 0])[0]
 
@@ -308,16 +308,16 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.133, 0.2, 0.2, 0.267, 0.2])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.0, 0.067, 0.333, 0.133, 0.467])[0]
 
-        self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.2, 0.8])[0]
-        self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.933, 0.067])[0]
-        self.interet_entreprises["Siemens"] = random.choices([1, 0], weights=[0.933, 0.067])[0]
-        self.interet_entreprises["Engie"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
-        self.interet_entreprises["Safran"] = random.choices([1, 0], weights=[0.267, 0.733])[0]
-        self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.467, 0.533])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.6, 0.4])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
-        self.interet_entreprises["Loreal"] = random.choices([1, 0], weights=[0.8, 0.2])[0]
-        self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
+        self.interet_entreprises["Thales"] = random.choices([0, 1], weights=[0.2, 0.8])[0]
+        self.interet_entreprises["Orange"] = random.choices([0, 1], weights=[0.933, 0.067])[0]
+        self.interet_entreprises["Siemens"] = random.choices([0, 1], weights=[0.933, 0.067])[0]
+        self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[1.0, 0.0])[0]
+        self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.267, 0.733])[0]
+        self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.467, 0.533])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0, 1], weights=[0.6, 0.4])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0, 1], weights=[1.0, 0.0])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.8, 0.2])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[1.0, 0.0])[0]
 
         Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0.05,0.523809524,0.036363636,0.111111111,0,0,0])[0]
         
@@ -359,8 +359,8 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.129, 0.871])[0]
         self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.677, 0.323])[0]
         self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.742, 0.258])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([0, 1], weights=[0.710, 0.290])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([0, 1], weights=[0.839, 0.161])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0, 1], weights=[0.710, 0.290])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0, 1], weights=[0.839, 0.161])[0]
         self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.935, 0.065])[0]
         self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[0.613, 0.387])[0]
 
@@ -398,16 +398,16 @@ class Etudiant:
         self.domaine_interets["Logistics"] = random.choices([1, 2, 3, 4, 5], weights=[0.333, 0.458, 0.208, 0.000, 0.000])[0]
         self.domaine_interets["Aerospace"] = random.choices([1, 2, 3, 4, 5], weights=[0.333, 0.292, 0.208, 0.083, 0.083])[0]
 
-        self.interet_entreprises["Thales"] = random.choices([1, 0], weights=[0.458, 0.542])[0]
-        self.interet_entreprises["Orange"] = random.choices([1, 0], weights=[0.708, 0.292])[0]
-        self.interet_entreprises["Siemens"] = random.choices([1, 0], weights=[0.792, 0.208])[0]
-        self.interet_entreprises["Engie"] = random.choices([1, 0], weights=[0.792, 0.208])[0]
-        self.interet_entreprises["Safran"] = random.choices([1, 0], weights=[0.667, 0.333])[0]
-        self.interet_entreprises["Renault"] = random.choices([1, 0], weights=[0.958, 0.042])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([1, 0], weights=[0.708, 0.292])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([1, 0], weights=[0.917, 0.083])[0]
-        self.interet_entreprises["Loreal"] = random.choices([1, 0], weights=[0.292, 0.708])[0]
-        self.interet_entreprises["EQUANS"] = random.choices([1, 0], weights=[1.0, 0.0])[0]
+        self.interet_entreprises["Thales"] = random.choices([0, 1], weights=[0.458, 0.542])[0]
+        self.interet_entreprises["Orange"] = random.choices([0, 1], weights=[0.708, 0.292])[0]
+        self.interet_entreprises["Siemens"] = random.choices([0, 1], weights=[0.792, 0.208])[0]
+        self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.792, 0.208])[0]
+        self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.667, 0.333])[0]
+        self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.958, 0.042])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0, 1], weights=[0.708, 0.292])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0, 1], weights=[0.917, 0.083])[0]
+        self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.292, 0.708])[0]
+        self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[1.0, 0.0])[0]
 
         Choix_E = random.choices([ 'EL-3012','EL-3013','EL-3019','EL-3020','EL-3025','EL-3031','EL-3035'], weights=[0,0,0.018181818,0.111111111,0.05,0.647058824,0.058823529])[0]
         
@@ -448,8 +448,8 @@ class Etudiant:
         self.interet_entreprises["Engie"] = random.choices([0, 1], weights=[0.946, 0.054])[0]
         self.interet_entreprises["Safran"] = random.choices([0, 1], weights=[0.703, 0.297])[0]
         self.interet_entreprises["Renault"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
-        self.interet_entreprises["Dassault systeme"] = random.choices([0, 1], weights=[0.514, 0.486])[0]
-        self.interet_entreprises["BNP Paribas"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
+        self.interet_entreprises["Dassault-systeme"] = random.choices([0, 1], weights=[0.514, 0.486])[0]
+        self.interet_entreprises["BNP-Paribas"] = random.choices([0, 1], weights=[0.622, 0.378])[0]
         self.interet_entreprises["Loreal"] = random.choices([0, 1], weights=[0.919, 0.081])[0]
         self.interet_entreprises["EQUANS"] = random.choices([0, 1], weights=[1.000, 0.000])[0]
 
@@ -544,3 +544,5 @@ def generator_student():
     all_students = students_dsi + students_sei + students_se + students_cyb + students_aic + students_inf + students_bio + students_ene + students_gi
     # Enregistrer les étudiants dans un fichier CSV
     save_students_to_csv('etudiants.csv', all_students)
+
+generator_student()

@@ -1,7 +1,8 @@
 # Serveur central Flask
 from flask import Flask
 from model import generate_model,prediction_etudiant
-
+from dash import dcc, html, callback, callback_context
+from dash.exceptions import PreventUpdate
 from dash import Output,Input,State
 
 server = Flask(__name__)
@@ -28,14 +29,14 @@ dropdown_options_F = [
 
 domaines =['Automotive','Environment','Construction','Tourism','Communication','Finance','Education','Energy','Farming','Telecom','Pharmaceutical','Media','Logistics','Aerospace']
 
-entreprises = ['Thales', 'Orange', 'Siemens', 'Engie', 'Safran', 'Renault', 'Dassault systeme', 'BNP Paribas', 'Loreal', 'EQUANS']
+entreprises = ['Thales', 'Orange', 'Siemens', 'Engie', 'Safran', 'Renault', 'Dassault-systeme', 'BNP-Paribas', 'Loreal', 'EQUANS']
 
 # Première application Dash
 from dash import Dash, html, dcc
 
 app_front_page = Dash(server=server, routes_pathname_prefix='/')
 app_front_page.layout = html.Div(className = 'wallpaper-rectangle',children = [
-    dcc.Location(id='url', refresh=False),
+    dcc.Location(id='url', refresh=True),
     html.Div(className='title-rectangle', children=[
         html.H1("QUELLE EST TA FILIERE ?", className='title-mainpage')
     ]),
@@ -47,7 +48,7 @@ app_front_page.layout = html.Div(className = 'wallpaper-rectangle',children = [
 # Seconde application Dash
 app_quiz_page = Dash(server=server, routes_pathname_prefix='/quiz/')
 app_quiz_page.layout = html.Div([
-    dcc.Location(id='url', refresh=False),
+    dcc.Location(id='url', refresh=True),
     html.H1("Trouve ta filière ! "),
     html.Div([
         html.Div([
@@ -85,20 +86,30 @@ app_quiz_page.layout = html.Div([
     ]),
 
     html.Div([
-        html.Button('Résultat', id='submit-val', n_clicks=0, className='button-container'),
-        html.Div(id='output-container-button', children='Voir les résultats', className='result-text')
+        html.Button('Affiche tes résultats !', id='submit-val', n_clicks=0, className='button-container'),
     ])
 ], className='container')
 
 
+from dash import Dash, html, dcc
+
 app_resultat_page = Dash(server=server, routes_pathname_prefix='/resultat/')
 app_resultat_page.layout = html.Div([
-    dcc.Location(id='url', refresh=False),
-    html.Div(id='result_image_container')  # Ce conteneur affichera l'image basée sur la prédiction
-])
+    dcc.Location(id='url', refresh=True),
+    html.Div(
+        id='result_image_container',
+        style={
+            'display': 'flex',
+            'justify-content': 'center',
+            'align-items': 'center',
+        }
+    )
+], style={
+    'background-image': 'url(/assets/WallPaper_4.jpg)',
+    'background-size': 'cover',  # Couvre entièrement l'espace sans déformation
+    'background-position': 'center center'  # Centre l'image de fond
+})
 
-from dash import dcc, html, callback, callback_context
-from dash.exceptions import PreventUpdate
 
 @app_quiz_page.callback(
     Output('url', 'pathname'),
@@ -108,31 +119,31 @@ from dash.exceptions import PreventUpdate
     [State('dropdown_E', 'value'), State('dropdown_F', 'value')]
 )
 def redirect_to_result(n_clicks, *values):
+
     if n_clicks > 0:
         prediction = prediction_etudiant(values,domaines,entreprises,[option['value'] for option in dropdown_options_E + dropdown_options_F])
         prediction = model.predict(prediction)
-        result_path = f"/resultat/?prediction={prediction}"
+        result_path = f"/resultat/{prediction}"
         return result_path
+
     else:
         raise PreventUpdate
 
-import urllib.parse
-
 @app_resultat_page.callback(
-    Output('result_image_container', 'children'),  # Mettez à jour cet Output pour correspondre à l'ID du nouveau conteneur
-    [Input('url', 'search')]
+    Output('result_image_container', 'children'),
+    [Input('url', 'pathname')]
 )
-def display_result(search):
-    query = urllib.parse.parse_qs(urllib.parse.urlparse(search).query)
-    prediction = query.get('prediction', [''])[0]
-    print(prediction)
-    if prediction:
-        # Construire le chemin vers l'image basée sur la prédiction
-        image_src = f'/assets/{prediction}.jpg'
-        # Retourner l'élément img pour être affiché dans le conteneur
-        return html.Img(src=image_src, style={"width": "100%", "height": "auto"})
-    return "Aucune prédiction fournie"
+def display_image(pathname):
+    if pathname and '/resultat/' in pathname:
+        prediction = pathname.split('/')[-1]  # Assume URL pattern /resultat/<prediction>
+        prediction = prediction.replace("[", "").replace("]", "").replace("'", "")
+        image_path = f'assets/{prediction}.jpg'
+        print(image_path)
+        
+        return html.Img(src=image_path)
+    else:
+        return "Aucune prédiction trouvée"
 
 if __name__ == "__main__":
     model = generate_model()
-    server.run(debug=True)
+    app_front_page.run(debug=True)

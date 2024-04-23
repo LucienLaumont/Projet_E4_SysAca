@@ -105,14 +105,20 @@
 
 /* Style pour le bouton */
 .button-container {
-    text-align: center;
-    display: inline-block;
+
+    display: flex;
+    justify-content: center;  /* Centre horizontalement */
+    align-items: center;      /* Centre verticalement */
+
+    font-weight: bold; /* Police en gras */
+    font-size: 30px; /* Taille de police */
 }
 
-/* Style pour le texte des résultats */
-.result-text {
-    text-align: center; /* Centrage */
-    margin-top: 20px; /* Espacement haut */
-    font-weight: bold; /* Police en gras */
-    font-size: 18px; /* Taille de police */
+.container .button-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement */
+    width: 100%;             /* S'assure que le conteneur prend toute la largeur */
+    height: 15vh;           /* Optionnel: prend toute la hauteur visible, pour centrage vertical total */
+    margin-top: 20px;        /* Ajoute un peu d'espace au-dessus du bouton */
 }

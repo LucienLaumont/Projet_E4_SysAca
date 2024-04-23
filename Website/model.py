@@ -14,7 +14,6 @@ def generate_model():
 
     X = data.drop(columns=['Filiere'])
     y = data['Filiere']
-    print(data.columns.values)
 
     # Diviser les données en ensembles d'entraînement et de test
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -37,7 +36,7 @@ def prediction_etudiant(quiz_responses, domaines, entreprises, cours):
     columns_order = [        
         # Entreprises
         'Thales', 'Orange', 'Siemens', 'Engie', 'Safran', 
-        'Renault', 'Dassault systeme', 'BNP Paribas', 'Loreal', 'EQUANS',
+        'Renault', 'Dassault-systeme', 'BNP-Paribas', 'Loreal', 'EQUANS',
 
         # Domaines
         'Automotive', 'Environment', 'Construction', 'Tourism', 'Communication',
